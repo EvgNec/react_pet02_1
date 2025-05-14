@@ -4,9 +4,16 @@ class Counter extends Component {
   state = {
     value: 0,
   };
-  handleClick = (e) => {
-    this.state.value +=1
+  handleClickIncrement = (e) => {
+    this.setState((prevState)=>( {value: prevState.value + 1}))
+    }
+  
+  handleClickDecrement = (e) => {
+    this.setState((prevState)=>{
+      return {value: prevState.value - 1}
+    })
   }
+
   render() {
     return (
       <div className="position-absolute top-50 start-50 translate-middle">
@@ -19,12 +26,12 @@ class Counter extends Component {
             <div className="d-flex justify-content-center px-5">
               <button
                 className="btn btn-outline-success me-5"
-                onClick={this.handleClick}
+                onClick={this.handleClickIncrement}
               >
-                <i className="bi bi-plus-circle fs-1">+</i>
+                <i className="bi bi-plus-circle fs-1"></i>
               </button>
-              <button className="btn btn-outline-success ms-5">
-                <i className="bi bi-dash-circle fs-1">-</i>
+              <button className="btn btn-outline-success ms-5" onClick={this.handleClickDecrement}>
+                <i className="bi bi-dash-circle fs-1"></i>
               </button>
             </div>
           </div>
