@@ -1,0 +1,49 @@
+.body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .counterBox {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+  }
+  
+  .counter-box h1 {
+    margin-bottom: 20px;
+  }
+  
+  #value {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: 2px solid #00ff80;
+    color: #00ff80;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #00ff8010;
+  }
