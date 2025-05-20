@@ -1,8 +1,30 @@
+import { useEffect } from 'react';
+
 const Modal = ({ children, closeModal }) => {
+  // Закриття по Escape
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [closeModal]);
+
+  // Клік поза модалкою
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
 	return (
 		<div
 			className='modal fade show'
 			style={{ display: 'block', backdropFilter: 'blur(5px)' }}
+			onClick={handleBackdropClick}
 		>
 			<div className='modal-dialog'>
 				<div className='modal-content'>
