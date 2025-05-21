@@ -7,6 +7,15 @@ class Statistics extends Component {
         neutral: 0,
         bad: 0
       }
+      render() {
+		return (
+			<>
+				<h1>Statistics</h1>
+              
 
+			</>
+		)
+	}
 };
+
     export default Statistics;
