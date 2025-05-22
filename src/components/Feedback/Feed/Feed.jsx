@@ -5,7 +5,8 @@ class Feed extends Component {
       render() {
         return (
             <>
-                <h1>Please leave feedback</h1>              
+                <h1>Please leave feedback</h1>
+                              
 
             </>
         )
