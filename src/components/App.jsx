@@ -5,6 +5,7 @@ import { Component } from 'react'
 // import Modal from './Modal/Modal'
 import Section from './Feedback/Section/Section'
 import Statistics from './Feedback/Statistics/Statistics'
+import Shop from './Shop/shop'
 
 class App extends Component {
 	state = {
@@ -25,7 +26,7 @@ class App extends Component {
 
 
 					<Statistics/>
-
+<Shop/>
 			</div>
 		)
 	}

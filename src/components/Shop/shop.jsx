@@ -1,11 +1,11 @@
 import React from "react";
-import Container from "./components/ui/Container";
-import Example from "./example/Example";
-import Cart from "./components/Cart/Cart";
-import Header from "./components/Header/Header";
-import ProductsList from "./components/ProductsList";
+import Container from "./UI/Container";
+import Example from "./Example/Example";
+import Cart from "./Cart/Cart";
+import Header from "./Header/Header";
+import ProductsList from "./ProductsList/ProductsList";
 
-export default class App extends React.Component {
+export default class Shop extends React.Component {
   state = {
     products: [
       { id: 1, image: "🍟", price: 8, name: "Fries" },
