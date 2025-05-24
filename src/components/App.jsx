@@ -3,9 +3,10 @@ import { Component } from 'react'
 // import Counter from './Counter/Counter'
 // import ToDoList from './ToDoList/ToDoList'
 // import Modal from './Modal/Modal'
-import Section from './Feedback/Section/Section'
-import Statistics from './Feedback/Statistics/Statistics'
-import Shop from './Shop/shop'
+// import Section from './Feedback/Section/Section'
+// import Statistics from './Feedback/Statistics/Statistics'
+// import Shop from './Shop/shop'
+import Shops from './Test/Shops'
 
 class App extends Component {
 	state = {
@@ -24,9 +25,8 @@ class App extends Component {
 		return (
 			<div className='container'>
 
+<Shops/>
 
-					<Statistics/>
-{/* <Shop/> */}
 			</div>
 		)
 	}
@@ -38,6 +38,8 @@ export default App;
 // render() {
 // 	return (
 // 		<div className='container'>
+					{/* <Statistics/> */}
+{/* <Shop/> */}
 // 			<Header showModal={this.showModal} /> */}
 // 			<Counter/>
 // 			{this.state.isShowModal && (
