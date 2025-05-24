@@ -26,7 +26,7 @@ class App extends Component {
 
 
 					<Statistics/>
-<Shop/>
+{/* <Shop/> */}
 			</div>
 		)
 	}

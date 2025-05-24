@@ -25,10 +25,22 @@ export default class Shop extends React.Component {
       this.handleToogleCart();
     }
   };
+	handleRemoveFromCart = (id) => {
+		this.setState((prev) => ({
+			todoList: prev.cart.filter((product) => product.id !== id),
+		}))};
+  // handleRemoveFromCart = (id) => {
+  //     //  оновлюємо корзину продуктів пілся видалення і перезаписуємо стейт
+  //     const updatedCart = this.state.cart.filter(
+  //       (product) => product.id === id
 
-  handleRemoveFromCart = (id) => {
-    // СПРОБУЙТЕ ЗРОБИТИ ЗАМОСТІЙНО
-  };
+  //     );
+  //     console.log("🚀 ~ Shop ~ id:", id)
+  //     console.log("🚀 ~ Shop ~ updatedCart:", updatedCart)
+  //     this.setState({ cart: updatedCart });
+  //   // this.setState((prev) => ({    
+	// 	// 	cart: prev.cart.filter((cart) => cart.id !== id)}))
+  // };
 
   handleAddToCart = (id) => {
     // перевіряємо чи є цей пролукт у корзині
@@ -69,7 +81,7 @@ export default class Shop extends React.Component {
         {/* <Example/> */}
 
         <Header handleToogleCart={this.handleToogleCart} cart={cart} />
-        <ProductsList
+      <ProductsList
           handleAddToCart={this.handleAddToCart}
           products={products}
         />
@@ -78,6 +90,7 @@ export default class Shop extends React.Component {
             cart={cart}
             handleBackdrop={this.handleBackdrop}
             handleToogleCart={this.handleToogleCart}
+            handleRemoveFromCart={this.handleRemoveFromCart}
           />
         )}
       </Container>

@@ -17,7 +17,7 @@ import {
   Text,
 } from "./cart.styled";
 
-export default function Cart({ cart, handleBackdrop, handleToogleCart }) {;
+export default function Cart({ cart, handleBackdrop, handleToogleCart, handleRemoveFromCart }) {;
   
   const totalPrice = cart.reduce(
     (total, product) => (total += product.quantity * product.price),
@@ -45,7 +45,7 @@ export default function Cart({ cart, handleBackdrop, handleToogleCart }) {;
                     <ProductQuantity>{quantity}</ProductQuantity>X
                     <ProductPrice>${price}</ProductPrice>
                   </Wrapper>
-                  <button>Remove</button>
+                  <button onClick={()=>handleRemoveFromCart(id)}>Remove</button>
                 </CartItem>
               ))}
             </CartList>
