@@ -1,10 +1,13 @@
 import React from "react";
 
-
-export default function  CatalogList ({product, onAdd}) {
+export default function Cart({products}) {
     return (
         <>
-           <li className="product-card" key={product.id}>
+          <p>Title</p>         
+          <ul className="product-list">
+          {products.map(
+            product => (
+                <li className="product-card" key={product.id}>
             <img
             src={product.image_url}
             alt={product.name}
@@ -18,9 +21,11 @@ export default function  CatalogList ({product, onAdd}) {
             <p className={`product-stock ${product.in_stock ? 'in' : 'out'}`}>
               {product.in_stock ? 'В наявності' : 'Немає в наявності'}
             </p>
-          </div>
-          <button onClick={() => onAdd(product.id)}>Add</button>
-            </li>        
+          </div>         
+            </li>  
+            )
+            )}
+         </ul>
         </>
-    )
+    );
 }

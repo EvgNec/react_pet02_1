@@ -3,7 +3,7 @@ import CatalogList from "../CatalogList";
 import './catalog.css';
 
 
-export default function Catalog({products, handleAddToCart}) {
+export default function Catalog({products, AddProduct}) {
     return (
         <>
           <p>Title</p>         
@@ -13,6 +13,7 @@ export default function Catalog({products, handleAddToCart}) {
                 <CatalogList
                    key={product.id}
                    product={product} 
+                   onAdd={AddProduct}
                 />
             )
             )}
