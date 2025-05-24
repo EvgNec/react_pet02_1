@@ -1,0 +1,83 @@
+[
+
+      {
+        "id": 101,
+        "name": "Бездротові навушники X100",
+        "price": 1299.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 102,
+        "name": "Смарт-годинник FitBand 5",
+        "price": 1899.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1524678714210-9917a6c619c7?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 103,
+        "name": "Ноутбук HP Pavilion 15",
+        "price": 19999.0,
+        "currency": "UAH",
+        "in_stock": false,
+        "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 104,
+        "name": "Ігрова миша Razer Viper",
+        "price": 1399.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1600267165685-f1a0ea23e278?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 105,
+        "name": "Мобільний телефон Galaxy A54",
+        "price": 10999.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1580910051074-4b1e53c28949?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 106,
+        "name": "Пилосос Dyson V11",
+        "price": 17999.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1615874959474-d609b3b4b1ff?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 107,
+        "name": "Пральна машина LG F4",
+        "price": 15999.0,
+        "currency": "UAH",
+        "in_stock": false,
+        "image_url": "https://images.unsplash.com/photo-1607860103374-79f4c26584b0?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 108,
+        "name": "Телевізор Philips 43\"",
+        "price": 9999.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1581320542640-ea6d4b5eaa64?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 109,
+        "name": "Кавоварка DeLonghi EC685",
+        "price": 6599.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1603787081186-361b7c13b6e6?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 110,
+        "name": "Електросамокат Mi Electric Scooter",
+        "price": 16999.0,
+        "currency": "UAH",
+        "in_stock": true,
+        "image_url": "https://images.unsplash.com/photo-1602933334850-02159a1d837e?auto=format&fit=crop&w=600&q=80"
+      }
+    ]

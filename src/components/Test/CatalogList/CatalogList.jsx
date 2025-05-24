@@ -19,6 +19,7 @@ export default function  CatalogList ({product}) {
               {product.in_stock ? 'В наявності' : 'Немає в наявності'}
             </p>
           </div>
+          <button>Add</button>
             </li>        
         </>
     )
