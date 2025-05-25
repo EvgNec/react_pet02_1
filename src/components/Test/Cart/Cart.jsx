@@ -1,43 +1,45 @@
 import React from 'react';
-import './cart.css'
+// import './cart.css'
+import css from './Cart.module.css';
+
 
 export default function Cart({ products, onDel, onDecr, onIncr }) {
   return (
     <>
       <p>Title</p>
-      <ul className="product-list">
+      <ul className={css.productList}>
         {products.map(product => (
-          <li className="product-card" key={product.id}>
+          <li className={css.productCard} key={product.id}>
             <img
               src={product.image_url}
               alt={product.name}
-              className="product-image"
+              className={css.productImage}
             />
-            <div className="product-info">
-              <h2 className="product-name">{product.name}</h2>
-              <p className="product-price">
+            <div className={css.productInfo}>
+              <h2 className={css.productName}>{product.name}</h2>
+              <p className={css.productPrice}>
                 {product.price.toFixed(2)} {product.currency}
               </p>
-              <p className={`product-stock ${product.in_stock ? 'in' : 'out'}`}>
+              <p className={`productStock ${product.in_stock ? 'in' : 'out'}`}>
                 {product.in_stock ? 'В наявності' : 'Немає в наявності'}
               </p>
             </div>
-            <div className="quantity-wrapper">
+            <div className={css.quantityWrapper}>
               <button
-                className="quantity-btn"
+                className={css.quantityBtn}
                 onClick={() => onDecr(product.id)}
                 disabled={product.quantity <= 1}
               >
                 −
               </button>
 
-              <div className="quantity-display">
-                <span className="quantity-number">{product.quantity}</span>
-                <span className="quantity-label">по 1 за раз</span>
+              <div className={css.quantityDisplay}>
+                <span className={css.quantityNumber}>{product.quantity}</span>
+                <span className={css.quantityLabel}>по 1 за раз</span>
               </div>
 
               <button
-                className="quantity-btn"
+                className={css.quantityBtn}
                 onClick={() => onIncr(product.id)}
               >
                 +
