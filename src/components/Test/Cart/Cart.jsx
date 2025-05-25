@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Cart({products}) {
+export default function Cart({products, onDel, onDecr, onIncr}) {
     return (
         <>
           <p>Title</p>         
@@ -21,7 +21,14 @@ export default function Cart({products}) {
             <p className={`product-stock ${product.in_stock ? 'in' : 'out'}`}>
               {product.in_stock ? 'В наявності' : 'Немає в наявності'}
             </p>
-          </div>         
+          </div> 
+          <div>
+          <button onClick={() => onDecr(product.id)}>-</button> 
+          <h2 className="product-name">{product.quantity}</h2>
+          <button onClick={() => onIncr(product.id)}>+</button> 
+          </div>
+          
+          <button onClick={() => onDel(product.id)}>Remove</button>        
             </li>  
             )
             )}

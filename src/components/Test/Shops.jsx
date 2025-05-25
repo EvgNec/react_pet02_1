@@ -41,12 +41,20 @@ export default class Shop extends React.Component {
     }
   };
 
+  onDel = (id) => {
+    this.setState((prev) =>
+    ({
+      cart: prev.cart.filter((product) => product.id !== id )
+    })
+    )
+  }
+
   render() {
     const { products, cart } = this.state;
     return (
       <>
         Test Shops
-        <Cart products={cart}/>
+        <Cart products={cart} onDel={this.onDel}/>
         <Catalog 
         products={products}
         AddProduct={this.AddProduct}
