@@ -49,12 +49,45 @@ export default class Shop extends React.Component {
     )
   }
 
+  onDecr = (id) => {
+    const targetProduct = this.state.cart.find(p => p.id === id);
+
+    if (targetProduct && targetProduct.quantity === 1) {
+      this.onDel(id); 
+      return;
+    }
+    const updatedCart = this.state.cart.map((product) => {
+      if (id === product.id) {
+        return { ...product, quantity: (product.quantity -= 1) };
+      }
+      return product;
+    });
+
+
+    
+  this.setState({ cart: updatedCart });
+  }
+
+  onIncr = (id) => {
+    const updatedCart = this.state.cart.map((product) => {
+      if (id === product.id) {
+        return { ...product, quantity: (product.quantity += 1) };
+      }
+      return product;
+    });  
+  this.setState({ cart: updatedCart });
+  }
+
+
   render() {
     const { products, cart } = this.state;
     return (
       <>
         Test Shops
-        <Cart products={cart} onDel={this.onDel}/>
+        <Cart products={cart} 
+        onDel={this.onDel}  
+        onDecr={this.onDecr}  
+        onIncr={this.onIncr}/>
         <Catalog 
         products={products}
         AddProduct={this.AddProduct}
