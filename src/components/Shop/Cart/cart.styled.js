@@ -20,8 +20,8 @@ export const Modal = styled.div`
 export const ModalContent = styled.div``;
 export const CloseButton = styled.button`
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 0px;
+  top: 10px;
 `;
 
 export const Title = styled.h2`
